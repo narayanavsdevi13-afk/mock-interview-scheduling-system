@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Schedule practice interviews between students and mentors.">
+  <title>Mock Interview Scheduling System</title>
+  <link rel="stylesheet" href="1.css">
+  <script src="1.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-mark">MI</span>
+      <span>MockInterview<span class="brand-light">.io</span></span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <button id="nav-login" class="button button-ghost">Log in</button>
+      <button id="nav-signup" class="button button-primary">Get started</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="landing" class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          YOUR NEXT INTERVIEW STARTS HERE
+        </div>
+        <h1>Practice with purpose.<br>
+          <span class="gradient-text">Interview with confidence.</span>
+        </h1>
+        <p>Book realistic mock interviews with mentors, get actionable feedback, and turn preparation into progress.</p>
+        <div class="hero-actions">
+          <button id="hero-signup" class="button button-primary button-large">
+            Start practicing <span aria-hidden="true">→</span>
+          </button>
+          <button id="hero-login" class="button button-secondary button-large">
+            I already have an account
+          </button>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack">
+            <span>AS</span><span>RK</span><span>MP</span>
+          </div>
+          <span>Build skills one conversation at a time</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+
+        <div class="visual-card main-visual-card">
+          <div class="visual-card-top">
+            <span class="live-dot"></span>
+            <span>UPCOMING SESSION</span>
+            <span class="visual-menu">•••</span>
+          </div>
+
+          <div class="mentor-row">
+            <div class="mentor-avatar">AR</div>
+            <div>
+              <strong>Alex Rivera</strong>
+              <p>Senior Software Engineer</p>
+            </div>
+            <span class="verified">✓</span>
+          </div>
+
+          <div class="session-info">
+            <span class="calendar-icon">▦</span>
+            <div>
+              <strong>Frontend Mock Interview</strong>
+              <p>Today · 4:30 PM – 5:15 PM</p>
+            </div>
+          </div>
+
+          <div class="progress-label">
+            <span>Preparation progress</span>
+            <strong>78%</strong>
+          </div>
+          <div class="progress-track"><span></span></div>
+
+          <div class="visual-footer">
+            <span>45 min session</span>
+            <span class="status-pill">Confirmed</span>
+          </div>
+        </div>
+
+        <div class="floating-card feedback-float">
+          <span class="feedback-icon">✦</span>
+          <div>
+            <strong>Feedback received</strong>
+            <p>Clear communication +12%</p>
+          </div>
+        </div>
+
+        <div class="floating-card slot-float">
+          <span class="slot-icon">✓</span>
+          <div>
+            <strong>Slot booked!</strong>
+            <p>Your next step is closer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features section-wrap">
+      <div class="section-heading">
+        <div class="eyebrow">MADE FOR REAL PROGRESS</div>
+        <h2>Everything you need to <span class="gradient-text">show up ready.</span></h2>
+        <p>A simple space for students and mentors to prepare, schedule, and improve.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon icon-purple">▦</div>
+          <h3>Book your time</h3>
+          <p>Browse mentor availability and request a slot that fits your schedule.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon icon-blue">↗</div>
+          <h3>Get real feedback</h3>
+          <p>Receive clear scores and practical feedback after each mock interview.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon icon-green">◎</div>
+          <h3>Track your progress</h3>
+          <p>Keep your interview history and next steps together in one dashboard.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="how-section">
+      <div class="section-wrap how-inner">
+        <div>
+          <div class="eyebrow">SIMPLE BY DESIGN</div>
+          <h2>From nervous to <span class="gradient-text">interview-ready.</span></h2>
+          <p class="muted">A few simple steps to make every practice session count.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <span>01</span>
+            <div>
+              <h3>Create your account</h3>
+              <p>Sign up as a student and access your dashboard.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span>02</span>
+            <div>
+              <h3>Choose a mentor slot</h3>
+              <p>Find a time and request a practice interview.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span>03</span>
+            <div>
+              <h3>Review and improve</h3>
+              <p>Complete the session and use mentor feedback to improve.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="auth-section" class="auth-section hidden">
+      <div class="auth-card">
+        <button id="auth-back" class="back-link">← Back to home</button>
+        <div class="auth-brand-mark">MI</div>
+        <h2 id="auth-title">Welcome back</h2>
+        <p id="auth-subtitle" class="muted">Sign in to continue your preparation.</p>
+
+        <div id="auth-message" class="message hidden" role="status"></div>
+
+        <form id="auth-form">
+          <div id="name-field" class="field hidden">
+            <label for="full-name">Full name</label>
+            <input id="full-name" name="name" autocomplete="name" placeholder="Your full name">
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" required
+                   autocomplete="email" placeholder="you@example.com">
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" minlength="8"
+                   required autocomplete="current-password" placeholder="At least 8 characters">
+          </div>
+
+          <button id="auth-submit" class="button button-primary button-full" type="submit">
+            Log in
+          </button>
+        </form>
+
+        <p id="auth-switch" class="auth-switch">
+          New here?
+          <button id="switch-mode" class="text-button" type="button">Create an account</button>
+        </p>
+        <p class="auth-note">
+          Student accounts can be created here. Mentor accounts are provisioned by the project administrator.
+        </p>
+      </div>
+    </section>
+
+    <section id="dashboard" class="dashboard hidden">
+      <aside class="dash-sidebar">
+        <a class="brand" href="#">
+          <span class="brand-mark">MI</span>
+          <span>MockInterview</span>
+        </a>
+
+        <div class="sidebar-label">WORKSPACE</div>
+        <button class="side-link active" data-view="overview">▦ &nbsp; Overview</button>
+        <button class="side-link" data-view="slots">◷ &nbsp; Available slots</button>
+        <button class="side-link" data-view="bookings">▤ &nbsp; My interviews</button>
+        <button id="mentor-nav" class="side-link hidden" data-view="manage">⚙ &nbsp; Manage slots</button>
+
+        <div class="sidebar-bottom">
+          <div class="user-mini">
+            <div id="user-avatar" class="mini-avatar">U</div>
+            <div>
+              <strong id="user-name">User</strong>
+              <small id="user-role">Student</small>
+            </div>
+          </div>
+          <button id="logout" class="button button-ghost button-full">Log out</button>
+        </div>
+      </aside>
+
+      <div class="dash-main">
+        <header class="dash-header">
+          <div>
+            <div class="eyebrow">YOUR WORKSPACE</div>
+            <h1 id="dashboard-heading">Good to see you.</h1>
+            <p id="dashboard-subheading" class="muted">
+              Your interview preparation, all in one place.
+            </p>
+          </div>
+          <div class="header-user">
+            <span class="header-user-dot"></span>
+            <span id="header-email"></span>
+          </div>
+        </header>
+
+        <div id="dashboard-message" class="message hidden" role="status"></div>
+        <div id="dashboard-content"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#">
+      <span class="brand-mark">MI</span>
+      <span>MockInterview<span class="brand-light">.io</span></span>
+    </a>
+    <span>Practice today. Perform tomorrow.</span>
+    <span>© 2026 MockInterview</span>
+  </footer>
+</body>
+</html>
